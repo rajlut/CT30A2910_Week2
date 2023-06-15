@@ -17,6 +17,7 @@ submitData.addEventListener("click", function () {
       break;
     }
   }
+
   // update the user information if the username already exists
   if (alreadyExists) {
     table.rows[rowNum].cells[1].innerHTML = email.value;
@@ -29,6 +30,7 @@ submitData.addEventListener("click", function () {
         <td>${email.value}</td>
         <td>${address.value}</td>
         <td>${isAdmin.checked ? "X" : "-"}</td>
+        <td><img src="${uploaded_image}" alt="${username.value}" width="50" height="50" /></td>
       </tr>`
   }
 })
@@ -39,3 +41,12 @@ emptyTable.addEventListener("click", function () {
   table = document.getElementById("user-info-table");
   table.innerHTML = "";
 })
+
+// Add the image to the table
+document.getElementById("input-image").addEventListener('change', function () {
+  if (this.files && this.files[0]) {
+    let img = document.getElementsByClassName("user-image")[0];
+
+    img.src = URL.createObjectURL(this.files[0]);
+  }
+});

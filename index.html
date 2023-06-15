@@ -25,29 +25,35 @@
 					<td>example@email.com</td>
 					<td>Demoland 123</td>
 					<td>X</td>
-					<td><img src="src/images/webmaster.png" alt="Webmaster" width="50" height="50" /></td>
+					<td>
+						<img class="user-image" src="src/images/webmaster.png" alt="Webmaster" width="50" height="50" />
+					</td>
 				</tr>
 				<tr>
 					<td>User123</td>
 					<td>example@email.com</td>
 					<td>Userplace 321</td>
 					<td>-</td>
-					<td><img src="src/images/user123.png" alt="User123" width="50" height="50" /></td>
+					<td>
+						<img class="user-image" src="src/images/user123.png" alt="User123" width="50" height="50" />
+					</td>
 				</tr>
 				<tr>
 					<td>AnotherUser222</td>
 					<td>example@email.com</td>
 					<td>AnotherPlace 21</td>
 					<td>-</td>
-					<td><img src="src/images/another_user.png" alt="Another user" width="50" height="50" /></td>
+					<td>
+						<img class="user-image" src="src/images/another_user.png" alt="Another user" width="50"
+							height="50" />
+					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 	<div>
-		<!-- Create a form, in which the user can fill information that are going to be added into the table  -->
 		<div id="user-form">
-			<form>
+			<form enctype="multipart/form-data" name="user-form">
 				<div>
 					<label for="username">Username</label>
 					<input type="text" id="input-username" name="username" />
@@ -66,7 +72,7 @@
 				</div>
 				<div>
 					<label for="userImage">Image</label>
-					<input type="file" id="input-image" name="image" />
+					<input type="file" id="input-image" name="image" accept="image/*" />
 				</div>
 				<div>
 					<input type="submit" id="submit-data" value="Submit" />
