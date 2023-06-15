@@ -8,36 +8,51 @@
 </head>
 
 <body>
-	<table>
-		<thead>
-			<tr>
-				<th>Username</th>
-				<th>Email</th>
-				<th>Address</th>
-				<th>Admin</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Webmaster</td>
-				<td>example@email.com</td>
-				<td>Demoland 123</td>
-				<td>X</td>
-			</tr>
-			<tr>
-				<td>User123</td>
-				<td>example@email.com</td>
-				<td>Userplace 321</td>
-				<td>-</td>
-			</tr>
-			<tr>
-				<td>AnotherUser222</td>
-				<td>example@email.com</td>
-				<td>AnotherPlace 21</td>
-				<td>-</td>
-			</tr>
-
-	</table>
+	<div id="user-info-table">
+		<table>
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th>Email</th>
+					<th>Address</th>
+					<th>Admin</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Webmaster</td>
+					<td>example@email.com</td>
+					<td>Demoland 123</td>
+					<td>X</td>
+				</tr>
+				<tr>
+					<td>User123</td>
+					<td>example@email.com</td>
+					<td>Userplace 321</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>AnotherUser222</td>
+					<td>example@email.com</td>
+					<td>AnotherPlace 21</td>
+					<td>-</td>
+				</tr>
+		</table>
+	</div>
+	<div id="user-form">
+		<!-- Create a form, in which the user can fill information that are going to be added into the table  -->
+		<form>
+			<label for="username">Username</label>
+			<input type="text" id="input-username" name="username" />
+			<label for="email">Email</label>
+			<input type="text" id="input-email" name="email" />
+			<label for="address">Address</label>
+			<input type="text" id="input-address" name="address" />
+			<label for="admin">Admin</label>
+			<input type="checkbox" id="input-admin" name="admin" />
+			<input type="submit" id="submit-data" value="Submit" />
+		</form>
+	</div>
 
 </body>
 
